@@ -196,6 +196,3 @@ if escolha == 3:
         print("1 - SIM \n2 - NÃO")
         continuar = int(input("Digiter sua escolha: "))
 print("Obrigado por jogar Jokenpô!")
-
-
-        
