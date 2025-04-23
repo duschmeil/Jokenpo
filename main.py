@@ -29,25 +29,25 @@ if escolha == 1:
             print(f"Computador jogou {computador}")
             if choose == 1:
                 if computador == 1 and pedra == 1:
-                    print("Empate!")
+                    print("Empate! Ambos jogaram pedra")
                 if computador == 2 and pedra == 1:
-                    print("Computador vence!")
+                    print("Computador vence! Computador jogou papel e jogador jogou pedra ")
                 if computador == 3 and pedra == 1:
-                    print("Jogador vence!")
+                    print("Jogador vence! Computador jogou tesoura e jogador jogou pedra")
             if choose == 2:
                 if computador == 1 and papel == 2:
-                    print("Jogador vence!")
+                    print("Jogador vence! Computador jogou pedra e jogador jogou papel")
                 if computador == 2 and papel == 2:
-                    print("Empate!")
+                    print("Empate! Ambos jogaram papel ")
                 if computador == 3 and papel == 2:
-                    print("Computador vence!")
+                    print("Computador vence! Computador jogou tesoura e jogador jogou papel")
             if choose == 3:
                 if computador == 1 and tesoura == 3:
-                    print("Computador vence!")
+                    print("Computador vence! Computador jogou pedra e jogador jogou tesoura")
                 if computador == 2 and tesoura == 3:
-                    print("Jogador vence!")
+                    print("Jogador vence! Computador jogou papel e jogador jogou tesoura")
                 if computador == 3 and tesoura == 3:
-                    print("Empate!")
+                    print("Empate! Ambos jogaram tesoura")
         else:
             break
 if escolha == 2:
