@@ -179,10 +179,17 @@ if escolha == 3:
                 print("O computador número 2 escolheu Tesoura")  
             sleep(1)
             if pc1 == pc2:
-                print("EMPATE!!")       
+                print("EMPATE!!")
+                print("PLACAR GERAL: ")
+                print(f"PC1 | PC2")
+                print(f"{contadorpc1:>3} | {contadorpc2:>3}")   
             elif (pc1 == 1 and pc2 == 3) or (pc1 == 2 and pc2 == 1) or (pc1 == 3 and pc2 == 2):
                 print("O computador número 1 GANHOU!!")
                 sleep(1)
+                contadorpc1 += 1
+                print("PLACAR GERAL: ")
+                print(f"PC1 | PC2")
+                print(f"{contadorpc1:>3} | {contadorpc2:>3}")
             else:
                 print("O computador número 2 GANHOU!!")
                 sleep(1) 
