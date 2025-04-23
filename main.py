@@ -13,6 +13,8 @@ continuar = 1
 
 if escolha == 1:
     print("Você escolheu jogar contra o computador!")
+    contadorp = 0
+    contadorpc = 0
     while True:
         if continuar == 1:
             pedra = 1
@@ -27,24 +29,57 @@ if escolha == 1:
             if choose == 1:
                 if computador == 1 and pedra == 1:
                     print("Empate! Ambos jogaram pedra")
+                    print("PLACAR GERAL: ")
+                    print(f" P1 |  PC")
+                    print(f"{contadorp:>3} | {contadorpc:>3}")
                 if computador == 2 and pedra == 1:
                     print("Computador vence! Computador jogou papel e jogador jogou pedra ")
+                    contadorpc += 1
+                    print("PLACAR GERAL: ")
+                    print(f" P1 |  PC")
+                    print(f"{contadorp:>3} | {contadorpc:>3}")
                 if computador == 3 and pedra == 1:
                     print("Jogador vence! Computador jogou tesoura e jogador jogou pedra")
+                    contadorp += 1
+                    print("PLACAR GERAL: ")
+                    print(f" P1 |  PC")
+                    print(f"{contadorp:>3} | {contadorpc:>3}")
             if choose == 2:
                 if computador == 1 and papel == 2:
                     print("Jogador vence! Computador jogou pedra e jogador jogou papel")
+                    contadorp += 1
+                    print("PLACAR GERAL: ")
+                    print(f" P1 |  PC")
+                    print(f"{contadorp:>3} | {contadorpc:>3}")
                 if computador == 2 and papel == 2:
                     print("Empate! Ambos jogaram papel ")
+                    print("PLACAR GERAL: ")
+                    print(f" P1 |  PC")
+                    print(f"{contadorp:>3} | {contadorpc:>3}")
                 if computador == 3 and papel == 2:
                     print("Computador vence! Computador jogou tesoura e jogador jogou papel")
+                    contadorpc += 1
+                    print("PLACAR GERAL: ")
+                    print(f" P1 |  PC")
+                    print(f"{contadorp:>3} | {contadorpc:>3}")
             if choose == 3:
                 if computador == 1 and tesoura == 3:
                     print("Computador vence! Computador jogou pedra e jogador jogou tesoura")
+                    contadorpc += 1
+                    print("PLACAR GERAL: ")
+                    print(f" P1 |  PC")
+                    print(f"{contadorp:>3} | {contadorpc:>3}")
                 if computador == 2 and tesoura == 3:
                     print("Jogador vence! Computador jogou papel e jogador jogou tesoura")
+                    contadorp += 1
+                    print("PLACAR GERAL: ")
+                    print(f" P1 |  PC")
+                    print(f"{contadorp:>3} | {contadorpc:>3}")
                 if computador == 3 and tesoura == 3:
                     print("Empate! Ambos jogaram tesoura")
+                    print("PLACAR GERAL: ")
+                    print(f" P1 |  PC")
+                    print(f"{contadorp:>3} | {contadorpc:>3}")
         else:
             break
         print("Você quer jogar novamente? ")
@@ -52,7 +87,8 @@ if escolha == 1:
         continuar = int(input("Digiter sua escolha: "))
 if escolha == 2:
     print("Você escolheu jogar contra outro jogador!")
-
+    contadorp1 = 0
+    contadorp2 = 0
     while True:
         if continuar == 1:
             escolha_player1 = int(input("Jogador 1 - Escolha qual você deseja: "))
@@ -63,30 +99,58 @@ if escolha == 2:
             if escolha_player1 == escolha_player2:
                 print("Empate")
                 print(f"Ambos escolheram {opcoes[escolha_player1]}.")
+                print("PLACAR GERAL: ")
+                print(f" P1 |  P2")
+                print(f"{contadorp1:>3} | {contadorp2:>3}")
             if escolha_player1 == 1 and escolha_player2 == 2:
                 print()
                 print("Jogador 2 ganhou!")
                 print("Papel vence Pedra. Jogador 2 com Papel ganhou de Jogador 1 com Pedra.")
+                contadorp2 += 1
+                print("PLACAR GERAL: ")
+                print(f" P1 |  P2")
+                print(f"{contadorp1:>3} | {contadorp2:>3}")
             if escolha_player1 == 2 and escolha_player2 == 1:
                 print()
                 print("Jogador 1 ganhou!")
                 print("Papel vence Pedra. Jogador 1 com Papel ganhou de Jogador 2 com Pedra.")
+                contadorp1 += 1
+                print("PLACAR GERAL: ")
+                print(f" P1 |  P2")
+                print(f"{contadorp1:>3} | {contadorp2:>3}")
             if escolha_player1 == 2 and escolha_player2 == 3:
                 print()
                 print("Jogador 2 ganhou!")
                 print("Tesoura vence Papel. Jogador 2 com Tesoura ganhou de Jogador 1 com Papel.")
+                contadorp2 += 1
+                print("PLACAR GERAL: ")
+                print(f" P1 |  P2")
+                print(f"{contadorp1:>3} | {contadorp2:>3}")
             if escolha_player1 == 3 and escolha_player2 == 2:
                 print()
                 print("Jogador 1 ganhou!")
                 print("Tesoura vence Papel. Jogador 1 com Tesoura ganhou de Jogador 2 com Papel.")
+                contadorp1 += 1
+                print("PLACAR GERAL: ")
+                print(f" P1 |  P2")
+                print(f"{contadorp1:>3} | {contadorp2:>3}")
             if escolha_player1 == 1 and escolha_player2 == 3:
                 print()
                 print("Jogador 1 ganhou!")
                 print("Pedra vence Tesoura. Jogador 1 com Pedra ganhou de Jogador 2 com Tesoura.")
+                contadorp1 += 1
+                print("PLACAR GERAL: ")
+                print(f" P1 |  P2")
+                print(f"{contadorp1:>3} | {contadorp2:>3}")
             if escolha_player1 == 3 and escolha_player2 == 1:
                 print()
                 print("Jogador 2 ganhou!")
                 print("Pedra vence Tesoura. Jogador 2 com Pedra ganhou de Jogador 1 com Tesoura.")
+                contadorp2 += 1
+                print("PLACAR GERAL: ")
+                print(f" P1 |  P2")
+                print(f"{contadorp1:>3} | {contadorp2:>3}")
+            
         else:
             break
         print("Você quer jogar novamente? ")
@@ -94,6 +158,8 @@ if escolha == 2:
         continuar = int(input("Digiter sua escolha: "))
 if escolha == 3:
     print("Você escolheu ver 2 computadores jogando!")
+    contadorpc1 = 0
+    contadorpc2 = 0
     while True:
         if continuar == 1:
             pc1 = random.randint(1, 3)
@@ -120,6 +186,10 @@ if escolha == 3:
             else:
                 print("O computador número 2 GANHOU!!")
                 sleep(1) 
+                contadorpc2 += 1
+                print("PLACAR GERAL: ")
+                print(f"PC1 | PC2")
+                print(f"{contadorpc1:>3} | {contadorpc2:>3}")
         else:
             break
         print("Você quer jogar novamente? ")
