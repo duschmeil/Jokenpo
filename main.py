@@ -33,11 +33,10 @@ if escolha == 2:
             break
 if escolha == 3:
     print("Você escolheu ver 2 computadores jogando!")
+    contadorpc1 = 0
+    contadorpc2 = 0
     while True:
-        print("Você deseja continuar ou sair?")
-        print("1 - Continuar")
-        print("0 - Sair")
-        continuar = int(input("Digite sua escolha: "))
+
         if continuar == 1:
             pc1 = random.randint(1, 3)
             pc2 = random.randint(1, 3)
@@ -56,13 +55,24 @@ if escolha == 3:
                 print("O computador número 2 escolheu Tesoura")  
             sleep(1)
             if pc1 == pc2:
-                print("EMPATE!!")       
+                print("EMPATE!!")
+                print("PLACAR GERAL: ")
+                print(f"PC1 | PC2")
+                print(f"{contadorpc1:>3} | {contadorpc2:>3}")                        
             elif (pc1 == 1 and pc2 == 3) or (pc1 == 2 and pc2 == 1) or (pc1 == 3 and pc2 == 2):
                 print("O computador número 1 GANHOU!!")
+                contadorpc1 += 1
                 sleep(1)
+                print("PLACAR GERAL: ")
+                print(f"PC1 | PC2")
+                print(f"{contadorpc1:>3} | {contadorpc2:>3}")                 
             else:
                 print("O computador número 2 GANHOU!!")
                 sleep(1) 
+                contadorpc2 += 1
+                print("PLACAR GERAL: ")
+                print(f"PC1 | PC2")
+                print(f"{contadorpc1:>3} | {contadorpc2:>3}")                 
         else:
             break
 print("Obrigado por jogar Jokenpô!")
