@@ -42,6 +42,6 @@ if escolha == 3:
         else:
             break
 print("Obrigado por jogar Jokenpô!")
-print("boravesesalva")
+
 
     
